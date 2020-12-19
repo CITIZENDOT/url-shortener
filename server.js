@@ -20,12 +20,12 @@ mongoose.connection
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/static'));
 
 
 
 app.get("/", async (req, res) => {
 	const data = await shortUrl.find({});
-	console.log("Data: ", data);
 	res.render("index", {
 		urlsArray: data
 	});
@@ -44,7 +44,6 @@ app.get("/:shortUrlParam", async (req, res) => {
 	const shortenedUrl = await shortUrl.findOne({
 		shortUrl: req.params.shortUrlParam
 	});
-	console.log(shortenedUrl);
 	if (shortenedUrl == null) return res.sendStatus(404);
 	shortenedUrl.visits++;
 	shortenedUrl.save();
