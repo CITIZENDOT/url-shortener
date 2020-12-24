@@ -1,0 +1,12 @@
+.shorten-button {
+  --width: 80%;
+  width: var(--width);
+  margin-left: calc((100% - var(--width)) / 2);
+}
+
+.display-alert {
+  margin-top: 2%;
+  --width: 80%;
+  width: var(--width);
+  margin-left: calc((100% - var(--width)) / 2);
+}

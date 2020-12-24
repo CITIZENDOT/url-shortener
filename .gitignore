@@ -1,2 +1,10 @@
+# dependencies
 node_modules
+
+# front-end build
+build
+
+# environment-variables
 .env
+
+npm-debug.log*
