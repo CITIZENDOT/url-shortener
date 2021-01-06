@@ -9,5 +9,3 @@ MongoDB for Database
 EJS for frontend
 Bootstrap for CSS
 ```
-
-* Currently Hosted at [here](https://url-optimize.herokuapp.com/)
